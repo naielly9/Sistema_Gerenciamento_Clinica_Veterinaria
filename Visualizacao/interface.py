@@ -15,7 +15,6 @@ class Interface:
             ft.ElevatedButton(text="Consultar Veterinário", on_click=lambda e: self.solicitarDados("consultar")),
             ft.ElevatedButton(text="Atualizar Veterinário", on_click=lambda e: self.solicitarDados("atualizar")),
             ft.ElevatedButton(text="Remover Veterinário", on_click=lambda e: self.solicitarDados("remover")),
-            # Adicione outros botões para Tutores, Animais e Procedimentos
         ])
 
          # Caminhos das imagens
@@ -55,7 +54,7 @@ class Interface:
                     self._exibir_veterinario(dados)
                 else:
                     self._exibir_dados("Veterinário não encontrado.")
-                return  # Adiciona um retorno aqui para não limpar e mostrar o menu novamente
+                return  
             elif acao == "atualizar":
                 veterinario = Veterinario(valores[1], valores[2], valores[3])
                 veterinario.atualizar(self._db, valores[0], valores[1], valores[2], valores[3])
